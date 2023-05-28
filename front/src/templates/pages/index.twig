@@ -1,0 +1,10 @@
+{% extends firstLoad ? "@layouts/base.twig" : "@layouts/ajaxPage.twig" %}
+{% block content %}
+    <main >
+      {% include "@components/ui-components/under-header/template.twig" %}
+      {% include "@components/ui-components/the-call-block/template.twig" %}
+      {% include "@components/ui-components/block-mats/template.twig" %}
+      <swiper-block class="swiper-block " />
+
+    </main>
+{% endblock %}

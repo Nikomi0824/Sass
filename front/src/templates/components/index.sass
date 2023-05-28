@@ -1,0 +1,45 @@
+@import "./base/style"
+@import './ui-components/style'
+
+@mixin Content
+    width: 1267px
+    max-width: 100%
+    padding: 0 20px
+    margin: 0 auto
+
+@mixin Linc 
+    font-weight: 500
+    font-size: 18px
+    line-height: 20px
+    letter-spacing: 2px
+    text-decoration: none
+    color: #767676
+
+@mixin Button
+    color: #E5E5E5
+    background: linear-gradient(95.2deg, #B90160 2.23%, #2E3192 99.51%)
+    width: 179px
+    height: 53px
+    border-radius: 7px
+    
+
+.content
+    @include Content
+    
+
+a
+    @include Linc
+
+a:hover
+    text-decoration: underline
+
+h1
+    font-size: 50px
+    width: 90%
+
+button
+    @include Button
+.t-page
+    background: #E5E5E5
+
+    
