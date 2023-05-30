@@ -1,0 +1,37 @@
+// color
+$Rectangle3: #767676;
+$Darc:#000000;
+$Belui:#E5E5E5;
+$headerGradient: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(212, 20, 90, 0.7) 98.16%);
+
+
+// mixin
+@mixin paragraf{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    
+}
+
+@mixin Colom{
+    display: flex;
+    align-items: center;
+}
+
+@mixin Conteiner{
+    width: 1267px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin Linc {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: $Rectangle3;
+    text-decoration: none;
+}

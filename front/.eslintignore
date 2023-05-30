@@ -1,6 +1,0 @@
-node_modules
-dist
-public
-webpack
-.eslintrc.js
-webpack.config.babel.js
