@@ -1,5 +1,5 @@
 <template>
-    <section class="all">
+    <section class="all" :class="isDark ? 'dark' : 'light'">
         <swiper
         :slidesPerView=1
         :spaceBetween="20" 
@@ -28,9 +28,14 @@
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
+import { mapGetters } from 'vuex'
 
 export default{
     name:"SwiperBlock",
+    computed:{
+        ...mapGetters({ isDark: 'Get_Dark' }),
+
+    },
     components:{
         Swiper,SwiperSlide
     },
@@ -61,7 +66,10 @@ export default{
 </script >
 
 <style scoped lang="scss">
-.all{
+.dark{
+    background: linear-gradient(90deg, #74346f,#5b2438,#523370);    
+}
+.light{
     background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
 }
 .swiper{

@@ -1,5 +1,5 @@
 <template>
-    <section class="informations">
+    <section class="informations" :class="isDark ? 'dark' : 'light'">
         <div class="contener">
             <div class="one">
                 <img src="/img/1.png" alt="logo-contact">
@@ -19,16 +19,26 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default{
     name: 'HeaderBlock',
+    computed:{
+         ...mapGetters({ isDark: 'Get_Dark' }),
+    }
 }
 </script>
 
 <style scoped lang="scss">
 @import '/public/global.scss';
-.informations{ 
+.dark{
+     background: linear-gradient(90deg, #74346f,#5b2438,#523370);                   
+}
+.light{
     background: $headerGradient;
-    color:$Belui;
+    
+}
+.informations{ 
+     color:$Belui;
     
    .contener{
     @include Conteiner;

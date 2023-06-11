@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="isDark ? 'dark' : 'light'">
    <HeaderBlock></HeaderBlock>
    <UnderHeaderBlock class="UnderHeader"></UnderHeaderBlock>
    <ContactBlock></ContactBlock>
@@ -18,7 +18,7 @@ import ContactBlock from './components/ContactBlock.vue';
 import ComparisonBlocks from './components/СomparisonBlock.vue'
 import SwiperBlock from './components/SwiperBlock.vue';
 import AdaptivSwiper from './components/AdaptivSwiper.vue';
-
+import { mapGetters } from 'vuex';
 
 export default{
   name:'App',
@@ -31,6 +31,9 @@ export default{
     SwiperBlock,
     AdaptivSwiper
  
+  },
+  computed:{
+    ...mapGetters({ isDark: 'Get_Dark' }),
   }
 }
 </script>
@@ -39,12 +42,13 @@ export default{
 @import '/public/main.scss';
 #app{
   font-family: Robot;
-  background-color: #E5E5E5;
   .FooterBlock{
     
 	width: 100%;
   margin-top: 200px;
-}
+  }
+  
+  
 .UnderHeader{
   margin-top: 47px;
 }
@@ -62,4 +66,10 @@ export default{
   }
 }
 }
+.leght{
+  background-color: #E5E5E5;
+}
+.dark{
+    background-color:#696969;
+  }
 </style>
